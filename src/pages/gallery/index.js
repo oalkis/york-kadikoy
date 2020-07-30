@@ -8,9 +8,9 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <div>
-        <div className="photos">
+        <div className="image-grid">
           {data.allFile.edges.map(({ node }) => {
-            return <Img key={node.id} fixed={node.childImageSharp.fixed} />;
+            return <Img key={node.id} fluid={node.childImageSharp.fluid} />;
           })}
         </div>
       </div>{" "}
@@ -25,8 +25,8 @@ export const pageQuery = graphql`
         node {
           id
           childImageSharp {
-            fixed {
-              ...GatsbyImageSharpFixed
+            fluid {
+              ...GatsbyImageSharpFluid
             }
           }
         }
