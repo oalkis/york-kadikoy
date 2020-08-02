@@ -1,0 +1,32 @@
+html {
+    font: 112.5%/1.45em Open Sans,serif;
+    box-sizing: border-box;
+    overflow-y: scroll;
+}
+body {
+    font-family: Open Sans,serif;
+    color: gray;
+    font-weight: 400;
+    font-size: 80%;
+    margin: 2px 2px 2px 2px;
+}
+* {
+    box-sizing: inherit;
+}
+*:before {
+    box-sizing: inherit;
+}
+*:after {
+    box-sizing: inherit;
+}
+a {
+    color: gray;
+    text-decoration: none;
+    outline: none;
+}
+a:focus {
+    outline: 0;
+}
+#gatsby-noscript {
+    display: none;
+}

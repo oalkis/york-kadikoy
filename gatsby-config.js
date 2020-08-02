@@ -4,17 +4,28 @@ module.exports = {
     description: "York Kadıköy Bar",
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-styled-jsx`,
+    },
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sass",
-    
     {
-      // keep as first gatsby-source-filesystem plugin for gatsby image support
-      resolve: "gatsby-source-filesystem",
+      resolve: `gatsby-plugin-typescript`,
       options: {
-        path: `${__dirname}/static/img`,
-        name: "uploads",
+        isTSX: true, // defaults to false
+        //jsxPragma: `jsx`, // defaults to "React" ??
+        allExtensions: true,
       },
     },
+    // {
+    //   resolve: "gatsby-theme-photo-albums",
+    //   options: {
+    //     baseUrl: "/gallery", // the path to the photo albums from your site (default: '/')
+    //     photosPerPage: 15, // the number of photos to display on a page (default: 15)
+    //     path: `${__dirname}/static/img/gallery`,
+    //     name: "gallery",
+    //   },
+    // },
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -23,19 +34,28 @@ module.exports = {
       },
     },
     {
+      // keep as first gatsby-source-filesystem plugin for gatsby image support
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/static/img`,
+        name: "uploads",
+      },
+    },
+
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         path: `${__dirname}/src/pages`,
         name: "pages",
       },
     },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        path: `${__dirname}/src/img`,
-        name: "images",
-      },
-    },
+    // {
+    //   resolve: "gatsby-source-filesystem",
+    //   options: {
+    //     path: `${__dirname}/src/img`,
+    //     name: "images",
+    //   },
+    // },
 
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
