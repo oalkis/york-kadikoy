@@ -111,12 +111,12 @@ class PostcardTemplate extends React.Component {
   handleKeyDown = (event) => {
     if (event.keyCode === 37) {
       /* Left arrow. */
-      navigate(`/gallery/${this.state.pageContext.prevId}`, {
+      navigate(`/gallery/images/${this.state.pageContext.prevId}`, {
         state: this.getStatePassForPrev(),
       });
     } else if (event.keyCode === 39) {
       /* Right arrow. */
-      navigate(`/gallery/${this.state.pageContext.nextId}`, {
+      navigate(`/gallery/images/${this.state.pageContext.nextId}`, {
         state: this.getStatePassForNext(),
       });
     }
@@ -126,7 +126,7 @@ class PostcardTemplate extends React.Component {
     return (
       typeof window !== "undefined" &&
       window &&
-      window.location.href.includes("/gallery/fromGallery?id=")
+      window.location.href.includes("/gallery/images/fromGallery?id=")
     );
   }
 
@@ -171,8 +171,10 @@ class PostcardTemplate extends React.Component {
       !this.getFromPassedStateOrDefault("pageContext")
     ) {
       /* Safeguard against the (unlikely) case where someone uses /images/fromGallery?id=... as an entry-point to the site. */
-      const id = window.location.href.split("/gallery/fromGallery?id=")[1];
-      navigate(`/gallery/${id}`, {
+      const id = window.location.href.split(
+        "/gallery/images/fromGallery?id="
+      )[1];
+      navigate(`/gallery/images/${id}`, {
         replace: true,
       });
     }
@@ -296,7 +298,7 @@ class PostcardTemplate extends React.Component {
 
               {/* Invisible helper links for prev/next navigation: clicking left side of the viewport links to prev, right side to next. */}
               <Link
-                to={`/gallery/${c.prevId}`}
+                to={`/gallery/images/${c.prevId}`}
                 state={this.getStatePassForPrev()}
                 title={c.image.title}
               >
@@ -311,7 +313,7 @@ class PostcardTemplate extends React.Component {
                 ></span>
               </Link>
               <Link
-                to={`/gallery/${c.nextId}`}
+                to={`/gallery/images/${c.nextId}`}
                 state={this.getStatePassForNext()}
                 title={c.image.title}
               >
@@ -328,7 +330,7 @@ class PostcardTemplate extends React.Component {
 
               {/* Navbuttons: prev/next (even though clicking anywhere on the page works, we want to help the user understand what they can do). */}
               <Link
-                to={`/gallery/${c.prevId}`}
+                to={`/gallery/images/${c.prevId}`}
                 state={this.getStatePassForPrev()}
               >
                 <FaArrowLeft
@@ -342,7 +344,7 @@ class PostcardTemplate extends React.Component {
                 />
               </Link>
               <Link
-                to={`/images/$gallery/{c.nextId}`}
+                to={`/gallery/images/${c.nextId}`}
                 state={this.getStatePassForNext()}
               >
                 <FaArrowRight
@@ -379,21 +381,21 @@ class PostcardTemplate extends React.Component {
                 {!this.state.isFullScreen && (
                   <FaExpand
                     style={{ right: "10px", bottom: "10px", cursor: "pointer" }}
-                    title="Tam ekrandan çık"
+                    title="Tam ekran"
                     onClick={this.enterFullScreenAndRender}
                   />
                 )}
               </span>
 
               {/* Navbutton: Download image. */}
-              <span className="download">
+              {/* <span className="download">
                 <a href={c.image.fluid.originalImg} download>
                   <FaDownload
                     style={{ right: "80px", bottom: "12px" }}
                     title="Download photo"
                   />
                 </a>
-              </span>
+              </span> */}
 
               {/* Current image.
                *     Includes a workaround to guarantee onLoad firing.

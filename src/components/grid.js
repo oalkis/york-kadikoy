@@ -12,9 +12,12 @@ const Grid = (props) => {
     j = 0,
     numberOfItemsOnLatestPage = 0;
   const js = !g.isInitializing();
+  debugger;
+
   if (g.useInfiniteScroll && g["page" + currentPage]) {
     for (var pageNum = currentPage; ; pageNum++) {
       const key = "page" + pageNum;
+
       if (g[key]) {
         /* Add gridItems that we have received metadata for. */
         numberOfItemsOnLatestPage = g[key].length;
@@ -59,8 +62,7 @@ const Grid = (props) => {
   return (
     <>
       {/* Unclickable Link to trigger prefetching for the image page. */}
-      <Link to="/"></Link>
-
+      <Link to="/gallery/images/"></Link>
       <div className="grid">{items}</div>
       <style jsx>
         {`

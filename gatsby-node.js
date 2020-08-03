@@ -124,7 +124,7 @@ exports.createPages = ({ actions, graphql }) => {
     const countPages = Math.ceil(nextFreeId / countImagesPerPage);
     for (var currentPage = 1; currentPage <= countPages; currentPage++) {
       /* Create paths "/", "/2", "/3", ... */
-      const pathSuffix = currentPage > 1 ? currentPage : "";
+      const pathSuffix = currentPage > 1 ? +currentPage : "";
 
       /* Collect metadata for images on this paginated gallery page. */
       const startIndexInclusive = countImagesPerPage * (currentPage - 1) + 1;
@@ -142,7 +142,7 @@ exports.createPages = ({ actions, graphql }) => {
 
       /* Combine all data needed to construct this page. */
       const pageData = {
-        path: `gallery/${pathSuffix}`,
+        path: `/gallery/${pathSuffix}`,
         component: paginatedGalleryTemplate,
         context: {
           pageImages: pageImages,
@@ -160,7 +160,7 @@ exports.createPages = ({ actions, graphql }) => {
     /* Create pages for images, too. */
     for (var currId = 1; currId < nextFreeId; currId++) {
       const pageData = {
-        path: `gallery/${currId}`,
+        path: `/gallery/images/${currId}`,
         component: path.resolve(`src/templates/postcardTemplate.js`),
         context: pageContexts[currId],
       };
@@ -169,7 +169,7 @@ exports.createPages = ({ actions, graphql }) => {
 
     /* Create a special dummy page needed for instant navigation from Gallery to image (explained in README). */
     createPage({
-      path: `gallery/fromGallery`,
+      path: `/gallery/images/fromGallery`,
       component: path.resolve(`src/templates/postcardTemplate.js`),
       context: dummyContext(),
     });
@@ -220,12 +220,12 @@ exports.createPages = ({ actions, graphql }) => {
   });
 };
 function createJSON(pageData) {
-  const pathSuffix = pageData.path.substring(1);
+  const pathSuffix = pageData.path.substring(9);
   const dir = "public/paginationJson/";
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir);
   }
-  const filePath = dir + "index" + pathSuffix + ".json";
+  const filePath = dir + "gallery" + pathSuffix + ".json";
   const dataToSave = JSON.stringify(pageData.context.pageImages);
   fs.writeFile(filePath, dataToSave, function (err) {
     if (err) {
