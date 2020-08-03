@@ -8,7 +8,7 @@ import {
   FaArrowRight,
   FaExpand,
   FaCompress,
-  FaDownload,
+  // FaDownload,
 } from "react-icons/fa";
 import { GlobalStateContext } from "../components/globalState.js";
 import { CornerCaseHandler } from "../components/cornerCaseHandler.js";
@@ -252,12 +252,13 @@ class PostcardTemplate extends React.Component {
 
     return (
       <>
+        {" "}
         <Helmet>
           <meta charSet="utf-8" />
-          <title>{
-            `York Kadıköy` /* Note: not a good idea to put image id here (needs JS to render the correct id). */
-          }</title>
-
+          <title>York Kadıköy</title>
+          <html lang="en" />
+          <meta name="description" content="York Kadıköy" />
+          <meta name="author" content="Orkun Alkış" />
           <style>
             {/* 
                 Set some CSS attributes into html and body tags of this page.
@@ -373,14 +374,22 @@ class PostcardTemplate extends React.Component {
               <span className="fullscreen">
                 {this.state.isFullScreen && (
                   <FaCompress
-                    style={{ right: "10px", bottom: "10px", cursor: "pointer" }}
+                    style={{
+                      right: "10px",
+                      bottom: "10px",
+                      cursor: "pointer",
+                    }}
                     title="Tam ekrandan çık"
                     onClick={this.exitFullScreenAndRender}
                   />
                 )}
                 {!this.state.isFullScreen && (
                   <FaExpand
-                    style={{ right: "10px", bottom: "10px", cursor: "pointer" }}
+                    style={{
+                      right: "10px",
+                      bottom: "10px",
+                      cursor: "pointer",
+                    }}
                     title="Tam ekran"
                     onClick={this.enterFullScreenAndRender}
                   />

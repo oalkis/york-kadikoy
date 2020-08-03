@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: "York Kadıköy",
     description: "York Kadıköy Bar",
+    author: "Orkun Alkış",
   },
   plugins: [
     {
@@ -80,6 +81,7 @@ module.exports = {
             resolve: "gatsby-remark-relative-images",
             options: {
               name: "gallery",
+              maxWidth: 1024,
             },
           },
           {

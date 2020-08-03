@@ -21,10 +21,6 @@ class PaginatedGalleryTemplate extends React.Component {
     return (
       <>
         <Layout>
-          <Helmet>
-            <meta charSet="utf-8" />
-            <title>York Kadıköy</title>
-          </Helmet>
           <GlobalStateContext.Consumer>
             {(globalState) => (
               <>
