@@ -36,7 +36,11 @@ class GridItem extends React.Component {
                 href={`/gallery/images/${props.item.id}`}
                 onClick={(e) => this.handleNavigation(e)}
               >
-                <img src={props.item.thumb.src} alt="" title="" />
+                <img
+                  src={props.item.thumb.src}
+                  alt={`YorkKadıköy_Galeri_${props.item.id}`}
+                  title={`YorkKadıköy`}
+                />
               </a>
             </>
           )}
