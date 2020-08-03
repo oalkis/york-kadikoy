@@ -2,8 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
+import Features from "../components/Features";
 
-export const IndexPageTemplate = ({ image }) => (
+export const IndexPageTemplate = ({ image, heading, description, intro }) => (
   <div>
     <div
       className="full-width-image margin-top-0"
@@ -15,6 +16,27 @@ export const IndexPageTemplate = ({ image }) => (
         backgroundAttachment: `fluid`,
       }}
     ></div>
+    <section className="section section--gradient">
+      <div className="container">
+        <div className="section">
+          <div className="columns">
+            <div className="column is-10 is-offset-1">
+              <div className="content">
+                <div className="columns">
+                  <div className="column is-12">
+                    <h3 className="has-text-weight-semibold is-size-2">
+                      {heading}
+                    </h3>
+                    <p>{description}</p>
+                  </div>
+                </div>
+                <Features gridItems={intro.blurbs} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 );
 
