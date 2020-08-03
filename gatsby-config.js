@@ -49,13 +49,13 @@ module.exports = {
         name: "pages",
       },
     },
-    {
-      resolve: "gatsby-source-googlemaps-geocoding",
-      options: {
-        key: "AIzaSyDWqS_AN6U0MYnmcTnIkhJSaEyLC1G9WFg",
-        address: `Boston, MA`,
-      },
-    },
+    // {
+    //   resolve: "gatsby-source-googlemaps-geocoding",
+    //   options: {
+    //     key: "AIzaSyDWqS_AN6U0MYnmcTnIkhJSaEyLC1G9WFg",
+    //     address: `Boston, MA`,
+    //   },
+    // },
     // {
     //   resolve: "gatsby-source-filesystem",
     //   options: {
