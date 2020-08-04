@@ -1,37 +1,36 @@
-import React, { Component } from "react";
-import GoogleMapReact from "google-map-react";
-import config from "../config.yaml";
-import toast from "../img/toast.svg";
-
-class SimpleMap extends Component {
-  static defaultProps = {
-    center: {
-      lat: 40.986413,
-      lng: 29.02579,
-    },
-    zoom: 18,
-  };
-
-  render() {
-    console.log(config);
-    return (
-      // Important! Always set the container height explicitly
-      <div style={{ height: "50vh", width: "100%" }}>
-        <GoogleMapReact
-          bootstrapURLKeys={{ key: config.googleMapApiKey }}
-          defaultCenter={this.props.center}
-          defaultZoom={this.props.zoom}
-          yesIWantToUseGoogleMapApiInternals
-        >
-          <img
-            src={toast}
-            alt="York Kadıköy"
-            style={{ width: "3em", height: "3em" }}
-          />
-        </GoogleMapReact>
+import React from "react";
+import Layout from "../components/layout";
+import LeafletMap from "../components/leafletmap";
+import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
+const IndexPage = () => (
+  <Layout>
+    {typeof window !== "undefined" && (
+      <LeafletMap
+        position={[40.986238, 29.025818]}
+        zoom={22}
+        markerText={"York Kadıköy"}
+      />
+    )}
+    <section>
+      <div>
+        {" "}
+        <div className="column is-4">
+          Adres:
+          <a href="https://goo.gl/maps/KMuGcEsRzmDxjbiy6">
+            <FaMapMarkerAlt />
+            Caferağa Mah, Dr. Esat Işık Cd. No:5A, 34710 Kadıköy/İstanbul
+          </a>
+        </div>
+        <div className="column is-4">
+          Telefon:
+          <a href="tel:+902164501000">
+            <FaPhoneAlt />
+            (0216) 450 10 00
+          </a>
+        </div>
       </div>
-    );
-  }
-}
+    </section>
+  </Layout>
+);
 
-export default SimpleMap;
+export default IndexPage;
