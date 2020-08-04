@@ -29,6 +29,7 @@
     "gatsby-theme-photo-albums": "^1.0.3",
     "gatsby-transformer-remark": "^2.7.5",
     "gatsby-transformer-sharp": "^2.4.7",
+    "google-map-react": "^2.0.4",
     "lodash": "^4.17.15",
     "lodash-webpack-plugin": "^0.11.4",
     "lodash.throttle": "^4.1.1",

@@ -18,15 +18,7 @@ module.exports = {
         allExtensions: true,
       },
     },
-    // {
-    //   resolve: "gatsby-theme-photo-albums",
-    //   options: {
-    //     baseUrl: "/gallery", // the path to the photo albums from your site (default: '/')
-    //     photosPerPage: 15, // the number of photos to display on a page (default: 15)
-    //     path: `${__dirname}/static/img/gallery`,
-    //     name: "gallery",
-    //   },
-    // },
+
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -50,20 +42,6 @@ module.exports = {
         name: "pages",
       },
     },
-    // {
-    //   resolve: "gatsby-source-googlemaps-geocoding",
-    //   options: {
-    //     key: "AIzaSyDWqS_AN6U0MYnmcTnIkhJSaEyLC1G9WFg",
-    //     address: `Boston, MA`,
-    //   },
-    // },
-    // {
-    //   resolve: "gatsby-source-filesystem",
-    //   options: {
-    //     path: `${__dirname}/src/img`,
-    //     name: "images",
-    //   },
-    // },
 
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
