@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "../components/layout";
+import Layout from "../components/Layout";
 import LeafletMap from "../components/leafletmap";
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
 const IndexPage = () => (
@@ -15,14 +15,14 @@ const IndexPage = () => (
       <div>
         {" "}
         <div className="column is-4">
-          Adres:
+          Adres:&nbsp;
           <a href="https://goo.gl/maps/KMuGcEsRzmDxjbiy6">
             <FaMapMarkerAlt />
             Caferağa Mah, Dr. Esat Işık Cd. No:5A, 34710 Kadıköy/İstanbul
           </a>
         </div>
         <div className="column is-4">
-          Telefon:
+          Telefon:&nbsp;
           <a href="tel:+902164501000">
             <FaPhoneAlt />
             (0216) 450 10 00
