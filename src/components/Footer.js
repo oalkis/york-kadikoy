@@ -17,47 +17,18 @@ const Footer = class extends React.Component {
               <div className="column is-4">
                 <section className="menu">
                   <div className="navbar-start has-text-centered">
-                    <Link
-                      className="navbar-item"
-                      style={{ color: "#ffffffff" }}
-                      to="/"
-                    >
+                    <Link className="footerItem" to="/">
                       Anasayfa
                     </Link>
-                    <Link
-                      className="navbar-item"
-                      style={{ color: "#ffffffff" }}
-                      to="/products"
-                    >
+                    <Link className="footerItem" to="/gallery">
                       Galeri
                     </Link>
-                    <Link
-                      className="navbar-item"
-                      style={{ color: "#ffffffff" }}
-                      to="/contact"
-                    >
+                    <Link className="footerItem" to="/contact">
                       İletişim
                     </Link>
-                    <Link
-                      className="navbar-item"
-                      style={{ color: "#ffffffff" }}
-                      to="/products"
-                    >
+                    <Link className="footerItem" to="/menu">
                       Menü
                     </Link>
-                    {/* <Link className="navbar-item" to="/about">
-                About
-              </Link> */}
-                    {/* <Link className="navbar-item" to="/products">
-                Products
-              </Link> */}
-                    {/* <Link className="navbar-item" to="/blog">
-                Blog
-              </Link> */}
-
-                    {/* <Link className="navbar-item" to="/contact/examples">
-                Form Examples
-              </Link> */}
                   </div>
                 </section>
               </div>
@@ -65,7 +36,7 @@ const Footer = class extends React.Component {
                 <div className="content has-text-centered">
                   <img
                     src={logo}
-                    alt="Kaldi"
+                    alt="York Kadıköy"
                     style={{ width: "7em", height: "2em" }}
                   />
                 </div>

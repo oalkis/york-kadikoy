@@ -43,7 +43,7 @@ const Navbar = class extends React.Component {
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: "88px" }} />
+              <img src={logo} alt="York Kadıköy" className="svg-icon" />
             </Link>
             {/* Hamburger menu */}
             <div
@@ -70,40 +70,11 @@ const Navbar = class extends React.Component {
               <Link className="navbar-item" to="/contact">
                 İletişim
               </Link>
-              <Link className="navbar-item" to="/products">
+              <Link className="navbar-item" to="/menu">
                 Menü
               </Link>
-              {/* <Link className="navbar-item" to="/about">
-                About
-              </Link> */}
-              {/* <Link className="navbar-item" to="/products">
-                Products
-              </Link> */}
-              {/* <Link className="navbar-item" to="/blog">
-                Blog
-              </Link> */}
-
-              {/* <Link className="navbar-item" to="/contact/examples">
-                Form Examples
-              </Link> */}
             </div>
             <div className="navbar-end has-text-centered">
-              {/* <a title="facebook" href="https://facebook.com/yorkkadikoy/">
-                <img
-                  src={facebook}
-                  alt="Facebook"
-                  style={{ width: "1em", height: "1em" }}
-                />
-              </a> */}
-              {/* <a title="twitter" href="https://twitter.com">
-                  <img
-                    className="fas fa-lg"
-                    src={twitter}
-                    alt="Twitter"
-                    style={{ width: "1em", height: "1em" }}
-                  />
-                </a> */}
-
               <a
                 className="navbar-item"
                 href="https://facebook.com/yorkkadikoy/"
