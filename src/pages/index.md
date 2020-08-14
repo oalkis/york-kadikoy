@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: Great coffee with a conscience
-image: /img/yorktemmuz-26.jpg
+image: /img/yorktemmuz-32.jpg
 heading: York Kadıköy
 subheading: Neque porro quisquam est qui dolorem ipsum quia dolor sit amet,
   consectetur, adipisci velit...
