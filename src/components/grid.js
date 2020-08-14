@@ -12,7 +12,6 @@ const Grid = (props) => {
     j = 0,
     numberOfItemsOnLatestPage = 0;
   const js = !g.isInitializing();
-  debugger;
 
   if (g.useInfiniteScroll && g["page" + currentPage]) {
     for (var pageNum = currentPage; ; pageNum++) {

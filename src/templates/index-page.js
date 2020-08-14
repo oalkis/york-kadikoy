@@ -13,7 +13,7 @@ export const IndexPageTemplate = ({ image, heading, description, intro }) => (
           !!image.childImageSharp ? image.childImageSharp.fluid.src : image
         })`,
         backgroundPosition: `top`,
-        backgroundAttachment: `fluid`,
+        backgroundAttachment: `fixed`,
       }}
     ></div>
     <section className="section section--gradient">
@@ -103,7 +103,7 @@ export const pageQuery = graphql`
           blurbs {
             image {
               childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
+                fluid(maxWidth: 320, quality: 64) {
                   ...GatsbyImageSharpFluid
                 }
               }

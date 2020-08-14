@@ -14,7 +14,6 @@ class View extends React.Component {
       !props.globalState.useInfiniteScroll
     ) {
       const pageKey = "page" + props.pageContext.currentPage;
-      debugger;
       props.globalState.updateState({
         [pageKey]: props.pageContext.pageImages,
         cursor: props.pageContext.currentPage + 1,
