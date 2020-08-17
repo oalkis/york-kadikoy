@@ -50,6 +50,7 @@ $black: #2b2523
   display: flex
   justify-content: center
   align-items: center
+  background-attachment: fixed
 // .svg-icon 
 //   width: 120px
 
@@ -132,7 +133,8 @@ $menu-label-color: $white-ter
 +tablet-only
   .blog-list-item .featured-thumbnail
     flex-basis: 50%;
-
+  .full-width-image
+   background-attachment: scroll;
 +mobile
   .blog-list-item header
     display: block
@@ -140,6 +142,8 @@ $menu-label-color: $white-ter
     text-align: center;
     max-width: 70%;
     margin: 0 0 1em;
+  .full-width-image
+   background-attachment: scroll;
 .footerItem
   color: $primary-invert;
   margin-left: 1em;
