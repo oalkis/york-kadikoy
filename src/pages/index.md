@@ -3,14 +3,13 @@ templateKey: index-page
 title: York Kadıköy
 image: /img/dsc00529-scaled.jpg
 heading: Nedir bu York?
-subheading: York Kadıköy
+subheading: “Yorkta senin için neler var”
 mainpitch:
   title: York Kadıköy
   description: Kadıköy, modada birlikte yiyip içelim, biraz da eğlenelim diye var
     olan bir yer york.
-description: Kadıköy, modada birlikte yiyip içelim, biraz da eğlenelim diye var
-  olan bir yer york. Barın tabureleri hazır, seni bekliyoruz...  *Yorkta senin
-  için neler var *
+description: "Kadıköy, modada birlikte yiyip içelim, biraz da eğlenelim diye var
+  olan bir yer york. Barın tabureleri hazır, seni bekliyoruz... "
 intro:
   blurbs:
     - image: /img/yorktemmuz-33.jpg
