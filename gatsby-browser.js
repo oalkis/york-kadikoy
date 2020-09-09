@@ -4,14 +4,17 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-import React from "react"
+import React from "react";
 
-import { GlobalState } from "./src/components/globalState.js"
+import {
+  GlobalState,
+  GlobalStateForMenu,
+} from "./src/components/globalState.js";
 
-export const wrapRootElement = ({ element }) => {
-    return (
-        <GlobalState>
-            {element}
-        </GlobalState>
-    )
-}
+export const wrapPageElement = ({ element }) => {
+  var pathname = window.location.pathname;
+  console.log(pathname);
+  if (pathname.includes("/menu"))
+    return <GlobalStateForMenu>{element}</GlobalStateForMenu>;
+  else return <GlobalState>{element}</GlobalState>;
+};

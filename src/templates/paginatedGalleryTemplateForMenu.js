@@ -1,13 +1,13 @@
 import React from "react";
 import { GlobalStateContext } from "../components/globalState.js";
-import { View } from "../components/view.js";
+import { ViewForMenu } from "../components/view.js";
 // import "../components/layout.css";
 import "typeface-open-sans/index.css";
 import { exitFullScreen } from "../util/fullScreenHelpers.js";
 //import theme from "../theme.yaml"
 import Layout from "../components/Layout";
 
-class PaginatedGalleryTemplate extends React.Component {
+class PaginatedGalleryTemplateForMenu extends React.Component {
   componentDidMount() {
     exitFullScreen();
   }
@@ -23,7 +23,7 @@ class PaginatedGalleryTemplate extends React.Component {
           <GlobalStateContext.Consumer>
             {(globalState) => (
               <>
-                <View
+                <ViewForMenu
                   globalState={globalState}
                   pageContext={this.props.pageContext}
                   highlight={highlight}
@@ -37,4 +37,4 @@ class PaginatedGalleryTemplate extends React.Component {
   }
 }
 
-export default PaginatedGalleryTemplate;
+export default PaginatedGalleryTemplateForMenu;

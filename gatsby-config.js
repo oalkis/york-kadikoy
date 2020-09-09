@@ -32,6 +32,13 @@ module.exports = {
       },
     },
     {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/static/img/menu`,
+        name: "menu",
+      },
+    },
+    {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: "gatsby-source-filesystem",
       options: {
@@ -64,6 +71,13 @@ module.exports = {
             resolve: "gatsby-remark-relative-images",
             options: {
               name: "gallery",
+              maxWidth: 1024,
+            },
+          },
+          {
+            resolve: "gatsby-remark-relative-images",
+            options: {
+              name: "menu",
               maxWidth: 1024,
             },
           },
