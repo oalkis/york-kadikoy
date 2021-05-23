@@ -37,7 +37,7 @@ const Footer = class extends React.Component {
                   <img
                     src={logo}
                     alt="York Kadıköy"
-                    style={{ width: "7em", height: "2em" }}
+                    style={{ width: "6em", height: "4em",backgroundColor:"white",borderRadius:"4em" }}
                   />
                 </div>
               </div>

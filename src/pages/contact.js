@@ -7,6 +7,7 @@ import { graphql } from "gatsby";
 
 const IndexPage = ({ data }) => (
   <Layout>
+    
     <div
       className="full-width-image-container margin-top-0"
       style={{
@@ -28,6 +29,7 @@ const IndexPage = ({ data }) => (
         - İletişim -
       </h1>
     </div>
+<div className="container">
 
     <section>
       <Grid
@@ -69,6 +71,9 @@ const IndexPage = ({ data }) => (
         />
       )}
     </div>
+    </div>
+
+  
   </Layout>
 );
 

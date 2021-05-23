@@ -3,12 +3,12 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Features from "../components/Features";
-import Slider from "react-slick"
-import Img from "gatsby-image"
+import Slider from "react-slick";
+import Img from "gatsby-image";
 
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
-import  "../components/index-page.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "../components/index-page.css";
 
 const settings = {
   dots: true,
@@ -18,56 +18,92 @@ const settings = {
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 3000,
-  appendDots: dots => <ul style={{ height: "6rem" }}>{dots}</ul>,
+  appendDots: (dots) => <ul style={{ height: "6rem" }}>{dots}</ul>,
   arrows: true,
- 
 };
+
+
 export const IndexPageTemplate = ({
   slides,
   heading,
   description,
   intro,
   subheading,
-}) => (
-  <div>
-    <Slider {...settings} className="overflow-hidden" >
-      {slides.map((item) => (
-        <Img
-        className="full-width-image margin-top-0"
-        fluid={item.image.childImageSharp.fluid} />
-      ))}
-    </Slider>
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
-          <div
-            className="columns"
-            style={{ width: "100%", margin: "0 auto" }}
-          >
-            <div className="column is-10 is-offset-1">
-              <div className="content">
-                <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                    <center>
-                      <h4>{subheading}</h4>
-                    </center>
+  image,
+}) => {
+
+  return (
+    <div>
+      <Slider {...settings} className="overflow-hidden">
+        {slides.map((item) => (
+          <Img
+            className="full-width-image margin-top-0"
+            fluid={item.image.childImageSharp.fluid}
+          />
+        ))}
+      </Slider>
+      <section className="section section--gradient">
+        <div className="container">
+          <div className="section">
+            <div
+              className="columns"
+              style={{ width: "100%", margin: "0 auto" }}
+            >
+              <div className="column is-10 is-offset-1">
+                <div className="content">
+                  <div className="columns">
+                    <div className="column is-12">
+                      <center>
+                        <h3 className="has-text-weight-semibold is-size-2">
+                          {heading}
+                        </h3>
+                        <p>{description}</p>
+                        <h4>{subheading}</h4>
+                      </center>
+                    </div>
+                  </div>
+                  <Features gridItems={intro.blurbs} />
+                  <div
+                    className="full-width-image-container margin-top-0"
+                    style={{
+                      backgroundImage: `url(${
+                        !!image.childImageSharp
+                          ? image.childImageSharp.fluid.src
+                          : image
+                      })`,
+                      height: "30vh",
+                    }}
+                  >
+                    <div align="center">
+                      <h1
+                       
+                        style={{
+                          color:"white",
+                          fontSize:"3em",
+                          marginBottom:"1em"
+                        }}
+                      >
+ETKİNLİKLER İÇİN                      </h1>
+                      <a className="buttonItem"  href="/contact">
+            Tıklayınız
+            </a>
+                    
+                      )
+                    </div>
                   </div>
                 </div>
-                <Features gridItems={intro.blurbs} />
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  </div>
-);
+      </section>
+    </div>
+  );
+};
 
 IndexPageTemplate.propTypes = {
+  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+
   title: PropTypes.string,
   slides: PropTypes.array,
   heading: PropTypes.string,
@@ -87,6 +123,7 @@ const IndexPage = ({ data }) => {
     <Layout>
       <IndexPageTemplate
         slides={frontmatter.slides}
+        image={frontmatter.image}
         title={frontmatter.title}
         heading={frontmatter.heading}
         subheading={frontmatter.subheading}
@@ -113,6 +150,13 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
+        image {
+          childImageSharp {
+            fluid(maxWidth: 2048, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         slides {
           image {
             childImageSharp {

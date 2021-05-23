@@ -1,8 +1,9 @@
 ---
 templateKey: index-page
 title: York Kadıköy
+image: /img/york-logo.jpg
 slides:
-  - image: /img/yorktemmuz-33.jpg 
+  - image: /img/york-logo.jpg 
   - image: /img/yorktemmuz-78.jpg
   - image: /img/yorktemmuz-101.jpg
   - image: /img/yorktemmuz-101.jpg  
