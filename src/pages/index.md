@@ -1,7 +1,11 @@
 ---
 templateKey: index-page
 title: York Kadıköy
-image: /img/dsc00529-scaled.jpg
+slides:
+  - image: /img/yorktemmuz-33.jpg 
+  - image: /img/yorktemmuz-78.jpg
+  - image: /img/yorktemmuz-101.jpg
+  - image: /img/yorktemmuz-101.jpg  
 heading: Nedir bu York?
 subheading: “Yorkta senin için neler var”
 mainpitch:

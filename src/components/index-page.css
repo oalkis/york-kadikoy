@@ -1,0 +1,11 @@
+.slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 20px;
+   
+    opacity: .50;
+    color: #ded9d9;
+
+}
+.slick-dots li {
+    margin: 0 10px;
+}

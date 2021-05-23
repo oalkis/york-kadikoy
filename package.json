@@ -47,7 +47,9 @@
     "react-helmet": "^6.0.0",
     "react-icons": "^3.7.0",
     "react-leaflet": "^2.7.0",
+    "react-slick": "^0.28.1",
     "screenfull": "^4.2.0",
+    "slick-carousel": "^1.8.1",
     "styled-jsx": "^3.2.1",
     "typeface-open-sans": "0.0.54",
     "uuid": "^7.0.0"
