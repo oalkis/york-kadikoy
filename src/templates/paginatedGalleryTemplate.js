@@ -12,7 +12,7 @@ class PaginatedGalleryTemplate extends React.Component {
     exitFullScreen();
   }
 
-  render() {
+  render(data) {
     const highlight =
       this.props.location && this.props.location.state
         ? this.props.location.state.highlight
@@ -20,6 +20,28 @@ class PaginatedGalleryTemplate extends React.Component {
     return (
       <>
         <Layout>
+        <div
+      className="full-width-image-container margin-top-0"
+      style={{
+        backgroundImage: `url(${
+          !!this.props.data.image.childImageSharp
+            ? this.props.data.image.childImageSharp.fluid.src
+            : this.props.data.image
+        })`,
+        height: "30vh",
+      }}
+    >
+      <h1
+        className="has-text-weight-bold is-size-1"
+        style={{
+          color: "white",
+          padding: "1rem",
+        }}
+      >
+        - Galeri -
+      </h1>
+    </div>
+
           <GlobalStateContext.Consumer>
             {(globalState) => (
               <>
@@ -36,5 +58,17 @@ class PaginatedGalleryTemplate extends React.Component {
     );
   }
 }
+
+export const query = graphql`
+  query {
+    image: file(relativePath: { eq: "york-logo.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
 
 export default PaginatedGalleryTemplate;

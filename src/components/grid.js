@@ -61,15 +61,17 @@ export const Grid = (props) => {
   return (
     <>
       {/* Unclickable Link to trigger prefetching for the image page. */}
+      
       <Link to="/gallery/images/"></Link>
-      <div className="grid">{items}</div>
+      <div className="container" >
+      <div className="grid">{items}</div></div>
       <style jsx>
         {`
           .grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             grid-template-rows: repeat(5, auto);
-            grid-gap: 1px;
+            grid-gap: 20px;
           }
 
           @media (max-width: 950px) {

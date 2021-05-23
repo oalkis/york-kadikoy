@@ -5,7 +5,6 @@ import Layout from "../components/Layout";
 import Features from "../components/Features";
 import Slider from "react-slick"
 import Img from "gatsby-image"
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
@@ -14,15 +13,13 @@ import  "../components/index-page.css";
 const settings = {
   dots: true,
   infinite: true,
-  speed: 1000,
+  speed: 3000,
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
   autoplaySpeed: 3000,
   appendDots: dots => <ul style={{ height: "6rem" }}>{dots}</ul>,
   arrows: true,
-
-  // afterChange: (index) => this.setState({ currentSlide: index }),
  
 };
 export const IndexPageTemplate = ({

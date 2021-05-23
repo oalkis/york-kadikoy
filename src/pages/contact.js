@@ -2,18 +2,50 @@ import React from "react";
 import Layout from "../components/Layout";
 import LeafletMap from "../components/leafletmap";
 import { FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
-const IndexPage = () => (
+import Grid from "@material-ui/core/Grid";
+import { graphql } from "gatsby";
+
+const IndexPage = ({ data }) => (
   <Layout>
-    {typeof window !== "undefined" && (
-      <LeafletMap
-        position={[40.986238, 29.025818]}
-        zoom={18}
-        markerText={"York Kadıköy"}
-      />
-    )}
+    <div
+      className="full-width-image-container margin-top-0"
+      style={{
+        backgroundImage: `url(${
+          !!data.image.childImageSharp
+            ? data.image.childImageSharp.fluid.src
+            : data.image
+        })`,
+        height: "30vh",
+      }}
+    >
+      <h1
+        className="has-text-weight-bold is-size-1"
+        style={{
+          color: "white",
+          padding: "1rem",
+        }}
+      >
+        - İletişim -
+      </h1>
+    </div>
+
     <section>
-      <div align="center" style={{ marginTop: 20 }}>
-        <div>
+      <Grid
+        container
+        direction="row"
+        justify="space-around"
+        alignItems="flex-start"
+      >
+        <div align="center">
+          <h3>Telefon Numarası</h3>
+          <a href="tel:+902164501000">
+            <FaPhoneAlt />
+            (0216) 450 10 00
+          </a>
+        </div>
+
+        <div align="center">
+          <h3>Adres</h3>
           <a href="https://maps.google.com/?q=york+Kadıköy/@40.9801391,29.0647604,14z/data=!3m1!4b1">
             <a href="https://maps.apple.com/maps?q=york+Kadıköy/@40.9801391,29.0647604,14z/data=!3m1!4b1">
               <FaMapMarkerAlt />
@@ -21,15 +53,35 @@ const IndexPage = () => (
             </a>
           </a>
         </div>
-        <div style={{ marginTop: 20 }}>
-          <a href="tel:+902164501000">
-            <FaPhoneAlt />
-            (0216) 450 10 00
-          </a>
+
+        <div align="center">
+          <h3>Çalışma Saatleri</h3>
+          12:00 - 02:00
         </div>
-      </div>
+      </Grid>
     </section>
+    <div style={{ marginTop: 50 }}>
+      {typeof window !== "undefined" && (
+        <LeafletMap
+          position={[40.986238, 29.025818]}
+          zoom={18}
+          markerText={"York Kadıköy"}
+        />
+      )}
+    </div>
   </Layout>
 );
+
+export const query = graphql`
+  query {
+    image: file(relativePath: { eq: "york-logo.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+  }
+`;
 
 export default IndexPage;
