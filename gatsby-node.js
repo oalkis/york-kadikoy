@@ -33,7 +33,7 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             absolutePath
             childImageSharp {
-              fixed(quality: 90, width: 450, height: 300, cropFocus: NORTH) {
+              fixed(quality: 90, width: 450, height: 300) {
                 src
               }
               fluid(

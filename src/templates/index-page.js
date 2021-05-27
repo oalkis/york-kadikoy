@@ -35,6 +35,7 @@ export const IndexPageTemplate = ({
       <Slider {...settings} className="overflow-hidden">
         {slides.map((item) => (
           <Img
+            key={item.image.childImageSharp.id}
             className="full-width-image margin-top-0"
             fluid={item.image.childImageSharp.fluid}
           />
@@ -109,7 +110,7 @@ IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 
   title: PropTypes.string,
-  slides: PropTypes.array,
+  slides:PropTypes.array,
   heading: PropTypes.string,
   subheading: PropTypes.string,
   mainpitch: PropTypes.object,
@@ -155,6 +156,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         image {
+         
           childImageSharp {
             fluid(maxWidth: 2048, quality: 100) {
               ...GatsbyImageSharpFluid
@@ -164,6 +166,7 @@ export const pageQuery = graphql`
         slides {
           image {
             childImageSharp {
+              id
               fluid(maxWidth: 1200, quality: 64) {
                 ...GatsbyImageSharpFluid
               }
