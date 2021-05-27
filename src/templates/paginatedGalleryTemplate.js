@@ -62,7 +62,7 @@ class PaginatedGalleryTemplate extends React.Component {
 
 export const query = graphql`
   query {
-    image: file(relativePath: { eq: "york-logo.jpg" }) {
+    image: file(relativePath: { eq: "mainpage_event.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
