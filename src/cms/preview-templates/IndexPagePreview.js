@@ -28,6 +28,7 @@ IndexPagePreview.propTypes = {
     getIn: PropTypes.func,
   }),
   getAsset: PropTypes.func,
+  getAssets:PropTypes.oneOfType([PropTypes.func])
 };
 
 export default IndexPagePreview;
