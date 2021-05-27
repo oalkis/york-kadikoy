@@ -180,7 +180,7 @@ exports.createPages = ({ actions, graphql }) => {
 
     /* Create a special dummy page needed for instant navigation from Gallery to image (explained in README). */
     createPage({
-      path: `/gallery/images/fromGallery`,
+      path: `/gallery/images`,
       component: path.resolve(`src/templates/postcardTemplate.js`),
       context: dummyContext(),
     });

@@ -126,7 +126,7 @@ class PostcardTemplate extends React.Component {
     return (
       typeof window !== "undefined" &&
       window &&
-      window.location.href.includes("/gallery/images/fromGallery?id=")
+      window.location.href.includes("/gallery/images?id=")
     );
   }
 
@@ -172,7 +172,7 @@ class PostcardTemplate extends React.Component {
     ) {
       /* Safeguard against the (unlikely) case where someone uses /images/fromGallery?id=... as an entry-point to the site. */
       const id = window.location.href.split(
-        "/gallery/images/fromGallery?id="
+        "/gallery/images?id="
       )[1];
       navigate(`/gallery/images/${id}`, {
         replace: true,

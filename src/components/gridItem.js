@@ -5,7 +5,7 @@ import { navigate } from "gatsby";
 export const GridItem = class GridItem extends React.Component {
   handleNavigation(e) {
     /* This unconventional navigation is explained in README. */
-    navigate(`/gallery/images/fromGallery?id=${this.props.item.id}`, {
+    navigate(`/gallery/images?id=${this.props.item.id}`, {
       state: { pageContext: this.props.item.pageContext },
     });
     e.preventDefault();
