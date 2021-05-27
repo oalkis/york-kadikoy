@@ -22,7 +22,6 @@ const settings = {
   arrows: true,
 };
 
-
 export const IndexPageTemplate = ({
   slides,
   heading,
@@ -31,7 +30,6 @@ export const IndexPageTemplate = ({
   subheading,
   image,
 }) => {
-
   return (
     <div>
       <Slider {...settings} className="overflow-hidden">
@@ -74,20 +72,26 @@ export const IndexPageTemplate = ({
                       height: "30vh",
                     }}
                   >
-                    <div align="center">
+                    <div align="center" style={{
+                          paddingBottom: "2rem",
+                          
+                        }}>
                       <h1
-                       
                         style={{
-                          color:"white",
-                          fontSize:"3em",
-                          marginBottom:"1em"
+                          color: "white",
+                          fontSize: "3rem",
+                          marginBottom: "2rem",
                         }}
                       >
-ETKİNLİKLER İÇİN                      </h1>
-                      <a className="buttonItem"  href="/contact">
-            Tıklayınız
-            </a>
-                    
+                        ETKİNLİKLER İÇİN{" "}
+                      </h1>
+                      <a
+                        className="buttonItem"
+                       
+                        href="/contact"
+                      >
+                        Tıklayınız
+                      </a>
                       )
                     </div>
                   </div>

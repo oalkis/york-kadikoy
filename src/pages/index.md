@@ -1,12 +1,15 @@
 ---
 templateKey: index-page
 title: York Kadıköy
-image: /img/york-logo.jpg
+image: /img/gallery/DSCF2566.jpg
 slides:
-  - image: /img/york-logo.jpg 
-  - image: /img/yorktemmuz-78.jpg
-  - image: /img/yorktemmuz-101.jpg
-  - image: /img/yorktemmuz-101.jpg  
+  - image: /img/slider/york_kadikoy_1.jpg 
+  - image: /img/slider/york_kadikoy_2.jpg
+  - image: /img/slider/york_kadikoy_3.jpg
+  - image: /img/slider/york_kadikoy_4.jpg  
+  - image: /img/slider/york_kadikoy_5.jpg
+  - image: /img/slider/york_kadikoy_6.jpg
+  - image: /img/slider/york_kadikoy_7.jpg
 heading: Nedir bu York?
 subheading: “Yorkta senin için neler var”
 mainpitch:
@@ -17,14 +20,14 @@ description: "Kadıköy, modada birlikte yiyip içelim, biraz da eğlenelim diye
   olan bir yer york. Barın tabureleri hazır, seni bekliyoruz... "
 intro:
   blurbs:
-    - image: /img/yorktemmuz-33.jpg
+    - image: /img/gallery/Kahdehler4.jpg
       text: "Acısıyla, tatlısıyla, bazen ekşisiyle, arada meyvelisiyle… damak tadın ne
         olursa olsun, yorkta sana göre bir kokteyl var. "
-    - image: /img/yorktemmuz-78.jpg
+    - image: /img/gallery/DSCF3131.jpg
       text: "İtalyanların pizzasını, İngilizlerin fish&chips’ini, Çinlilerin
         noodle’ını ve diğer bir çok lezzeti senin için derledik. İster çatal
         bıçakla, ister parmaklarınla... dilediğin gibi tadını çıkart. "
-    - image: /img/yorktemmuz-101.jpg
+    - image: /img/gallery/DSCF2603.jpg
       text: >-
         Sevdiklerinle atmosferin ve müziklerin tadını çıkar. Konuşacak bir şey
         kalmazsa, sorun değil. Çevir gözlerini televizyonlardan birine, bir
@@ -34,18 +37,5 @@ intro:
   heading: York Kadıköy
   description: Kadıköy, modada birlikte yiyip içelim, biraz da eğlenelim diye var
     olan bir yer york.
-main:
-  heading: York Kadıköy
-  description: >
-    Kadıköy, modada birlikte yiyip içelim, biraz da eğlenelim diye var olan bir
-    yer york..
-  image1:
-    alt: York Kadıköy
-    image: /img/dsc00529-scaled.jpg
-  image2:
-    alt: York Kadıköy
-    image: /img/dsc00529-scaled.jpg
-  image3:
-    alt: York Kadıköy
-    image: /img/dsc00529-scaled.jpg
+
 ---

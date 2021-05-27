@@ -6,6 +6,7 @@ import "typeface-open-sans/index.css";
 import { exitFullScreen } from "../util/fullScreenHelpers.js";
 //import theme from "../theme.yaml"
 import Layout from "../components/Layout";
+import { graphql } from 'gatsby';
 
 class PaginatedGalleryTemplate extends React.Component {
   componentDidMount() {

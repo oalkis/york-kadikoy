@@ -145,7 +145,7 @@ export default function ButtonBases(data) {
 }
 export const query = graphql`
   query {
-    image: file(relativePath: { eq: "york-logo.jpg" }) {
+    image: file(relativePath: { eq: "DSCF2587.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid
