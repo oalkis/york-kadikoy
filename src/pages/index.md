@@ -1,7 +1,7 @@
 ---
 templateKey: index-page
 title: York Kadıköy
-image: /img/gallery/DSCF2566.jpg
+image: /img/mainpage_event.jpg
 slides:
   - image: /img/slider/york_kadikoy_1.jpg 
   - image: /img/slider/york_kadikoy_2.jpg
