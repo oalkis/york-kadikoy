@@ -16,7 +16,7 @@ const IndexPage = ({ data }) => (
             ? data.image.childImageSharp.fluid.src
             : data.image
         })`,
-        height: "30vh",
+        height: "70vh",
       }}
     >
       <h1

@@ -94,7 +94,7 @@ export default function ButtonBases(data) {
             ? data.data.image.childImageSharp.fluid.src
             : data.data.image
         })`,
-        height: "30vh",
+        height: "70vh",
       }}
     >
       <h1
@@ -117,6 +117,8 @@ export default function ButtonBases(data) {
           style={{
             width: image.width,
           }}
+          href='york-menu.pdf'
+          target="_blank"
         >
           <span
             className={classes.imageSrc}

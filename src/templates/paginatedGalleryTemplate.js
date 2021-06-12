@@ -29,7 +29,7 @@ class PaginatedGalleryTemplate extends React.Component {
             ? this.props.data.image.childImageSharp.fluid.src
             : this.props.data.image
         })`,
-        height: "30vh",
+        height: "70vh",
       }}
     >
       <h1

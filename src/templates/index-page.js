@@ -62,15 +62,23 @@ export const IndexPageTemplate = ({
                     </div>
                   </div>
                   <Features gridItems={intro.blurbs} />
-                  <div
-                    className="full-width-image-container margin-top-0"
+    
+        
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div
+                    className="full-width-image margin-top-0"
                     style={{
                       backgroundImage: `url(${
                         !!image.childImageSharp
                           ? image.childImageSharp.fluid.src
                           : image
                       })`,
-                      height: "30vh",
+                      height: "70vh",
                     }}
                   >
                     <div align="center" style={{
@@ -96,12 +104,6 @@ export const IndexPageTemplate = ({
                       )
                     </div>
                   </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
